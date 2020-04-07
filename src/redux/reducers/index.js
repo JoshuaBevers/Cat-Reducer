@@ -4,4 +4,5 @@ import nameReducer from "./name";
 
 export default combineReducers({
   activity: activityReducer,
+  name: nameReducer,
 });

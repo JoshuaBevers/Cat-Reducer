@@ -1,13 +1,12 @@
-import { ADD_NAME } from "../actionTypes";
+import { ACTION_SET_NAME } from "../actionTypes";
 
-const initialState = {
-  name: "Sean's Name",
-};
+const initialState = "Artemis";
 
-export const nameReducer = (state = initialState, name) => {
-  switch (name.type) {
-    case ADD_NAME: {
-      return { ...state, name: "new name" };
+export const nameReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ACTION_SET_NAME: {
+      const { name } = action.payload;
+      return name;
     }
     default:
       return state;

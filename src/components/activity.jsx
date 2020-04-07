@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setActivity } from "../redux/actions";
+
 import UpdateName from "../components/nameInput";
 
 const Activity = ({ activity, name, setActivity }) => (
@@ -17,8 +18,8 @@ const Activity = ({ activity, name, setActivity }) => (
 );
 
 const mapStateToProps = (state) => {
-  const { activity } = state;
-  return activity;
+  const { activity, name } = state;
+  return { activity, name };
 };
 
 export default connect(
