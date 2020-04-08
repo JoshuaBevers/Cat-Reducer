@@ -22,6 +22,10 @@ const mapStateToProps = (state) => {
   return { activity, name };
 };
 
+// const mapDispatchToProps = (dispatch) => {
+//   return { setActivity: (activity) => dispatch(setActivity(activity)) };
+// }; this is long hand of what the set activity on 31 is doing.
+
 export default connect(
   mapStateToProps, // what do I want?
   { setActivity } // what do I want to do?
